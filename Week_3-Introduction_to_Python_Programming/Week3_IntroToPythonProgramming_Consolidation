@@ -60,10 +60,10 @@ def calculate_area():
 calculate_area() # This core line calls the calculate_area function.
 
 # This code section gives the user the option to repeat the calculation
-ans = int(input("Would you like to do this again. \n  1. Yes \n  2. No "))
+ans = int(input("Would you like to do this again. \n  1. Yes \n  2. No  \n"))
 while ans == 1:
     calculate_area()
-    ans = int(input("Would you like to do this again. \n  1. Yes \n  2. No ")) 
+    ans = int(input("Would you like to do this again. \n  1. Yes \n  2. No \n ")) 
 
          
  # This code section ends the program when the user confirms they do not want to repeat the operation
