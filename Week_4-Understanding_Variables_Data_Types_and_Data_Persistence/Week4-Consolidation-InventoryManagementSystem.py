@@ -3,11 +3,10 @@
 
 # Importing JSON and OS path-finding functionns
 import json
-# import os
-
-# location = r"C:\Users\uchec\OneDrive\Software Dev Module code for backup\Week4"
-# InventoryFile = os.path.join(location, 'inventoryStorage.json')
-InventoryFile = 'inventoryStorage.json'
+import os
+# The below will locate the JSON file for long-term storage if it is in the same folder as the Python programme.
+script_dir = os.path.dirname(os.path.abspath(__file__))
+InventoryFile = os.path.join(script_dir, 'inventoryStorage.json')
 
 inventory = []  # Initialising inventory as an empty list
 
