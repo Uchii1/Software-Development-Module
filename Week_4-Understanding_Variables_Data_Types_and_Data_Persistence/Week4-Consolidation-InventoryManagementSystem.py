@@ -1,0 +1,164 @@
+# WEEK 4 CONSOLIDATION TASK: INVENTORY MANAGEMENT SYSTEM
+# The programme allows users to add products, update product details and view the inventory.
+
+# Importing JSON and OS path-finding functionns
+import json
+import os
+
+location = r"C:\Users\uchec\OneDrive\Software Dev Module code for backup\Week4"
+InventoryFile = os.path.join(location, 'inventoryStorage.json')
+inventory = []  # Initialising inventory as an empty list
+
+# FUNCTION TO ADD A NEW PRODUCT
+# This collects and stores the product name, quantity and price
+def add_product(name):
+
+    # This opens and reads the JSON file: inventoryStorage.json
+    if os.path.exists(InventoryFile):
+        with open(InventoryFile, "r") as f:
+            inventory = json.load(f)
+    else:
+        inventory = [] # If file does not exist, this creates an empty list.
+    
+    # The below creates a new inventory entry in the form of a dictionary, with the price and quantity as keys
+    name = name.strip().capitalize()
+
+    # This returns an error message if the item is already in the inventory
+    if any(item["name"] == name for item in inventory):
+        print("This product already exists. Use the update option to modify quantity or price. \n Returning to main menu...")
+        return 
+    
+    else:
+        print(f"Adding new product: {name}")
+        # The below adds the item to the inventory or returns an error message as appropriate
+        try:
+            quantity = int(input("Enter quantity: "))
+            price = float(input("Enter price per unit: "))
+            id = len(inventory) + 1  # This assigns the next positive integer as the ID number of the new item
+            name = {
+                "id": id,
+                "name": name,
+                "quantity": quantity,
+                "price": price
+            }
+            inventory.append(name)  # This appends the item to the end of the inventory list
+
+            # The below saves the additions to the JSON file
+            with open(InventoryFile, "w") as f:
+                json.dump(inventory, f, indent = 2)  # The indent paramenter will print each task attribute on a new line, aiding readability
+            print(f"{name} added successfully!")
+
+        except ValueError:
+            print("\nInvalid input. Please enter numeric values only for quantity and price. Quantity must be a whole number")
+            print("Please return to main menu and try again.")
+            print("Returning to main menu...  ")
+
+        except Exception as e:
+            print(f"Error: {e}")
+
+
+# FUNCTION TO VIEW THE INVENTORY
+# This prints all current products in the inventory and their details
+def view_inventory():
+    # This opens and reads the JSON file: inventoryStorage.json
+    if os.path.exists(InventoryFile):
+        with open(InventoryFile, "r") as f:
+            inventory = json.load(f)
+    
+    # The below lines formats the printing of the inventory data
+    print("\nCurrent Inventory:")
+    print("-" * 40)
+    print(f"{'id':<5} {'Product':<15}{'Quantity':<10}{'Price':<15}") 
+    print("-" * 40)
+    # Below, each inventory item's details is printed. The price is printed to 2 decimal places.
+    for name in inventory:
+        print(f"{name['id']:<5} {name['name']:<15} [{name['quantity']:<5}] {name['price']:<15.2f}")
+    print("-" * 40)
+    
+    # The below handles an exception where the inventory is empty
+    if not inventory:
+        print("Inventory is empty.")
+
+
+# FUNCTION TO UPDATE PRODUCT QUANTITY OR PRICE
+def update_product():
+
+    # This opens and reads the JSON file: inventoryStorage.json
+    if os.path.exists(InventoryFile):
+        with open(InventoryFile, "r") as f:
+            inventory = json.load(f)
+    
+    view_inventory()  # Prints all inventory so the user can choose an item to update
+    
+    # This collects the ID of the product that is to be updated
+    search_id = int(input("Enter product ID to update: "))
+    
+    for item in inventory:
+        # This checks if the requested product to be updated is on the inventory list
+        if (item["id"]) == search_id:
+            print(f"\nProduct has been found in the inventory" )
+
+            # If the requested product is found, the user whether the price or quantity is to be updated
+            print("Would you like to update its quantity or price? You can update one of these fields at a time")
+            print((f"\n 1. Update Quantity of {item['name']} \n 2. Update Price of {item['name']}"))
+            update_choice = input("Enter your choice (1-2): ")
+
+            # This updates the quantity if the user selects option 1
+            if update_choice == "1":
+                quantity = int(input("Enter new quantity: "))
+                item["quantity"] = quantity
+            
+            # This updates the price if the user selects option 2
+            elif update_choice == "2":
+                price = float(input("Enter the new price per unit: "))
+                item["price"] = price     
+
+            # This handles a situation where the user does not select a valid update option      
+            else:
+                print("You must enter a valid field to update. Please return to main menu and try again.")
+                print("Returning to main menu...")
+                main()  # The programme returns to the main menu so the user can try again.
+
+    # The below saves the changes to InventoryFile
+    with open(InventoryFile, "w") as f:
+        json.dump(inventory, f, indent = 2)  # The indent paramenter will print each task attribute on a new line, aiding readability
+    print("Updated successfully!")
+
+
+# MAIN MENU FUNCTION
+def main():
+    while True:
+        print("\n==== Simple Inventory Management System ====")
+        print("1. Add Product")
+        print("2. Update Product")
+        print("3. View Inventory")
+        print("4. Exit")
+        choice = input("Enter your choice (1-4): ")
+
+        # If the user enters 1, this requests the product name and implements the add_product function or prints an error message as appropriate
+        if choice == "1":
+            print("\nPlease provide a Product Name. This must be entered as one string with no spaces.")
+            name = input("Enter the Product Name: ")
+            if name.strip().capitalize(): 
+                try:
+                    add_product(name)
+                except Exception as e:
+                    print (f"Error: {e}")
+            else:
+                print("The Product Name field can not be empty. Please return to main menu and try again")
+        # For other inputs, the relevant function is called
+        elif choice == "2":
+            update_product()
+        elif choice == "3":
+            view_inventory()
+        elif choice == "4":
+            print("Exiting the Inventory Management System... Goodbye!")
+            break
+        # The below handles an invalid menu choice by the user
+        else:
+            print("Invalid choice. Please try again. \nReturning to main menu...")
+
+
+# The below calls the main menu function, and serves as the entry point for the programme
+if __name__ == "__main__":
+    main()

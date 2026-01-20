@@ -1,0 +1,51 @@
+**WEEK 4 CONSOLIDATION TASK - README FILE - Instructions on Usage**
+
+**Introduction**
+The Python programme is a simple Command Line Interface (CLI) inventory management system. It can recieve input of product details and write these into a JSON file for long-term storage. The product names cannot be changed, but product quantities and prices can be updated.
+
+**Use Cases**
+The inventory management system will be useful for storing the price and quantity details of small to medium amounts of inventory. While there is no upper limit for the number of inventory items, to retain its speed, the programme can optimally manage a few hundred entries.
+It will be helpful for a small business warehouse or a private household's kitchen pantry.
+
+**Installation**
+The programme contains a python file, and a linked JSON file for data storage, both of which can be downloaded and run directly.
+
+**Usage**
+Run the program:
+    bash
+python Week4-Consolidation-InventoryManagementSystem.py
+
+**Adding Products** (Main Menu Option 1)
+To add a product, enter the product name as a string. The product name can include numbers, letters and special characters such as spaces,hyphens and exclamation marks.
+(Acceptable product name inputs include: jam, cheese, chocolate, apricot jam, cheddar cheese, dark chocolate, 7UP and ChipsAhoy!).
+If the first character in the name is a letter, Python automatically capitalises it.
+
+Enter the product quantity as an integer (whole number), and the price as a floating number without the currency symbol (e.g. 3.25 instead of £3.25). 
+
+If the wrong value types are entered, the programme will return to the main menu, and you can try again.
+
+**Usage Example**
+Making an Entry: 
+
+Main Menu (1-4): 1
+Product Name: Cheddar-cheese
+Enter quantity: 5
+Enter price per unit: 0.89
+Output: {'id': 11, 'name': 'Peanut-butter', 'quantity': 5, 'price': 0.89} added successfully!
+
+The new entry will be added as a dictionary in the JSON file.
+
+**Updating Products** (Main Menu Option 2)
+To update a product, select the product from the list displayed, by inputing the product ID. You can then choose whether to update the price or quantity. If you wish to update both, update one value first, then return to the main menu and proceed to update the other value.
+
+Ensure to enter a whole number for the product quantity, and a number for the price. If a long float is entered for the price, the price will be stored and displayed to the nearest 2 decimal places, as it is a monetary quantity.
+
+As product names cannot be changed through the Python programme, to change a product, you can change the present product quantity (and price) to 0, and  then add the product as a new product with an appropriately modified name, and with the new price and quantity. It is also possible to directly modify the product details in the JSON file.
+
+
+**Viewing Products** (Main Menu Option 3)
+To view the inventory, enter option 3 on the main menu. The programme will then print the inventory list.
+The programme then prints the main menu, from which you can perform another action.
+
+**Exiting the Programme** (Main Menu Option 4)
+To exit the programme, select 4 on the main menu.
