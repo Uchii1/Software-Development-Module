@@ -3,10 +3,12 @@
 
 # Importing JSON and OS path-finding functionns
 import json
-import os
+# import os
 
-location = r"C:\Users\uchec\OneDrive\Software Dev Module code for backup\Week4"
-InventoryFile = os.path.join(location, 'inventoryStorage.json')
+# location = r"C:\Users\uchec\OneDrive\Software Dev Module code for backup\Week4"
+# InventoryFile = os.path.join(location, 'inventoryStorage.json')
+InventoryFile = 'inventoryStorage.json'
+
 inventory = []  # Initialising inventory as an empty list
 
 # FUNCTION TO ADD A NEW PRODUCT
