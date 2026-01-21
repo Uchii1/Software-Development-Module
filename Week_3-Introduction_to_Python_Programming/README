@@ -1,0 +1,4 @@
+Area of Rectangle Calculator (Using Loops)
+
+The programme calculates the area of a rectangle (length x breadth)
+It uses loops to check that the length and breadth are integers and positive integers, before proceeding with the calculation.
