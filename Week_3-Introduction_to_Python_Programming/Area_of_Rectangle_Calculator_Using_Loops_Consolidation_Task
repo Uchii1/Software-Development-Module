@@ -8,6 +8,7 @@ def calculate_area():
 
     length = input('Please enter the length of the rectangle:')
     
+    # The WHILE statement is a LOOPING statement. It executes as long as the length inputed by the user is not a valid number
     while not length.isdigit():
         print("Error: Please enter a valid number")
         length = input('Please enter the length of the rectangle:')
@@ -26,6 +27,7 @@ def calculate_area():
     #This converts the length to an integer after validation
     length = int(length) 
 
+    # The IF statement below is a CONDITIONAL statement. It only executes once the length inputted by the user is positive. 
     if length > 0:
         # When a positive length is entered, the programme proceeds to request the width  
         width = input("Please enter the width of the rectangle: ")
