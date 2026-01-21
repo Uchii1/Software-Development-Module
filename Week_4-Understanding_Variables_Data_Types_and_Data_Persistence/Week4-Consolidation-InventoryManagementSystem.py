@@ -34,7 +34,8 @@ def add_product(name):
         # The below adds the item to the inventory or returns an error message as appropriate
         try:
             quantity = int(input("Enter quantity: "))
-            price = float(input("Enter price per unit: "))
+            price_input = float(input("Enter price per unit: "))
+            price = round(price_input, 2)  # This rounds the inputted price to the nearest 2 decimal places.
             id = len(inventory) + 1  # This assigns the next positive integer as the ID number of the new item
             name = {
                 "id": id,
@@ -162,4 +163,5 @@ def main():
 
 # The below calls the main menu function, and serves as the entry point for the programme
 if __name__ == "__main__":
+
     main()
