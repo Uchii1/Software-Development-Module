@@ -32,7 +32,7 @@
  {
   "id": 7,
   "description": "Book flight ticket",
-  "completed": false
+  "completed": true
  },
  {
   "id": 8,
@@ -42,7 +42,7 @@
  {
   "id": 9,
   "description": "Review email inbox",
-  "completed": false
+  "completed": true
  },
  {
   "id": 10,

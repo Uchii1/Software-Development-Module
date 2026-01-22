@@ -8,7 +8,7 @@ import os
 
 # The below will locate the JSON file for long-term storage if it is in the same folder as the Python programme.
 script_dir = os.path.dirname(os.path.abspath(__file__))
-InventoryFile = os.path.join(script_dir, 'taskStorage6.json')
+TASKFILE = os.path.join(script_dir, 'taskStorage6.json')
 
 # ADD TASKS FUNCTION
 def add(description):
@@ -69,7 +69,7 @@ def complete(id):
 
             print(f"✓ Task {task_id} is now marked complete ...")
             print("=" *50 + "\n")  # Line for decoration and neatness.
-            print("\nReturning to Main Menu...")
+            print("Returning to Main Menu...")
             return
 
     # If the task is not found, the following error message is returned.
