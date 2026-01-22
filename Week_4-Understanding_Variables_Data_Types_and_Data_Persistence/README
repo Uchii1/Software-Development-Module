@@ -11,7 +11,7 @@ It will be helpful for a small business warehouse or a private household's kitch
 The programme contains a python file, and a linked JSON file for data storage, both of which can be downloaded and run directly.
 
 **Usage**
-Run the program:
+Run the program with CLI:
     bash
 python Inventory_Management_System_Consolidation_Task.py
 
@@ -49,4 +49,5 @@ The programme then prints the main menu, from which you can perform another acti
 
 **Exiting the Programme** (Main Menu Option 4)
 To exit the programme, select 4 on the main menu.
+
 
