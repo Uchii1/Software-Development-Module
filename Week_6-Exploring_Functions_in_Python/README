@@ -1,4 +1,4 @@
-README FILE
+README File
 Week 6 Consolidation Task: Python Task Manager 
 
 **Introduction**
@@ -25,3 +25,4 @@ If there are no tasks, an error message is displayed, and the programme returns 
 
 --> Mark Complete function:
 This lists existing tasks, and the user can mark one complete. The programme then returns to the main menu.
+
