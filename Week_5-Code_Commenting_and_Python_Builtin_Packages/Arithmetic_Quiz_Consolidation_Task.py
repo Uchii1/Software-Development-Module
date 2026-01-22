@@ -163,7 +163,7 @@ time_taken = mark_end - mark_start
 score = mark1 + mark2 + mark3 + mark4 + mark5
 
 # A decrative feature before printing the score
-print("Quiz Completed!")
+print("\nQuiz Completed!")
 print(" ")
 print("LOADING... Please wait", end=" ")
 for i in range (3):
