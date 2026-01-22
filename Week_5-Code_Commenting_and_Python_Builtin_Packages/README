@@ -1,16 +1,19 @@
+README FILE
+Week 5 Consolidation Task - Arithmetic Quiz
 
+**INTRODUCTION**
+The programme is a Command Line Interface (CLI) arithmetic quiz.
+The user answers five questions on different mathematical concepts
+Using the python random module, the programme can generate different questions everytime the programme is run. Using the timer module, Python can measure the time taken to complete all five questions. 
 
-Add task function: 
-The user must enter something in the box to proceed.
-The function will return to the main menu if the input text is empty or only a blank space is entered.
+**INSTALLATION**
+The programme contains a python file, which can be downloaded and run directly. No attachments are neeeded.
 
-List Task  function:
-This lists all tasks with their completion status indication, task id number, and task description, then displays the main menu
-If there are no tasks, an error message is displayed, and the user returns to the main menu.
+Run the program with CLI on Windows
+<file path> python Number_Guessing_Game_Using_Loops.py
+It can also be open directly on a Python runtime software.
 
-Mark Complete function:
-This lists existing tasks, and the user can mark one complete. The programme then returns to the main menu.
-
-Main menu:
-This lists the above functionalities, assigning a value to each. The user enters their choice as a number (as a string)
-The function is recursive, and calls itself if an invalid choice is entered.
+** INSTRUCTIONS **
+Answer each question by typing in the digits, and press enter. The quiz measures the time taken to answer the questions from the time the first question is displayed to the time you press enter for the final question. This time is displayed at the end of the programme's running.
+are not valid integers will still count towards the eight attemtps.
+When you correctly guess the number, or use up the eight guesses, the programme terminates.
