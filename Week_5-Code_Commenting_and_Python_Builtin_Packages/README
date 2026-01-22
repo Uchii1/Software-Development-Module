@@ -3,17 +3,25 @@ Week 5 Consolidation Task - Arithmetic Quiz
 
 **INTRODUCTION**
 The programme is a Command Line Interface (CLI) arithmetic quiz.
-The user answers five questions on different mathematical concepts
+
+The user answers five questions on the following mathematical concepts:
+1) squares
+2) division remainders
+3) factorials
+4) exponents
+5) addition
+
 Using the python random module, the programme can generate different questions everytime the programme is run. Using the timer module, Python can measure the time taken to complete all five questions. 
+
+Extensive comments are used in the source code to aid further developers and users.
 
 **INSTALLATION**
 The programme contains a python file, which can be downloaded and run directly. No attachments are neeeded.
 
-Run the program with CLI on Windows
-<file path> python Number_Guessing_Game_Using_Loops.py
+Run the program with CLI on Windows:
+python C:\path\to\Arithmetic_Quiz_Including_Comments.py
 It can also be open directly on a Python runtime software.
 
 ** INSTRUCTIONS **
-Answer each question by typing in the digits, and press enter. The quiz measures the time taken to answer the questions from the time the first question is displayed to the time you press enter for the final question. This time is displayed at the end of the programme's running.
-are not valid integers will still count towards the eight attemtps.
-When you correctly guess the number, or use up the eight guesses, the programme terminates.
+Answer each question by typing in the digits, and press enter. 
+The quiz measures the time taken to answer the questions from the time the first question is displayed to the time you press enter for the final question. This time is displayed at the end of the programme's running. There is no time limit to answer the questions, however.
