@@ -2,17 +2,13 @@
 # This Python task manager uses functions for each part of its functionality.
 # The programme's functions will include: Add, Complete and Display. Tasks are saved in a JSON file for long-term storage.
 
-
-# Python imports the json function and os path-fiding function.
+# Importing JSON and OS path-finding functionns
 import json
 import os
 
-
-# This is the path to the folder that contains the JSON file for long-term storage
-#location = r"C:\Users\uchec\OneDrive\Software Dev Module code for backup\Week 6" <-- Old JSON address
-location = r"C:\Users\uchec\OneDrive\Software Dev Module code for backup\Week 6\Week6UploadedWork"
-TASKFILE = os.path.join(location, 'taskStorage6.json')
-
+# The below will locate the JSON file for long-term storage if it is in the same folder as the Python programme.
+script_dir = os.path.dirname(os.path.abspath(__file__))
+InventoryFile = os.path.join(script_dir, 'taskStorage6.json')
 
 # ADD TASKS FUNCTION
 def add(description):
@@ -132,4 +128,5 @@ def menu():
             menu()  # This is recursive and it returns to the main menu if the user enters an invalid choice.
 
 if __name__ == "__main__":
+
     menu()  # This runs the mainmenu function when the script is executed directly.
