@@ -13,7 +13,7 @@ The programme contains a python file, and a linked JSON file for data storage, b
 
 **Usage**
 Run the program with CLI on Windows:
-<file path> python Inventory_Management_System_Consolidation_Task.py
+python C:\path\to\python Inventory_Management_System_Consolidation_Task.py
 
 It can also be open directly on a Python runtime software.
 
@@ -50,6 +50,7 @@ The programme then prints the main menu, from which you can perform another acti
 
 **Exiting the Programme** (Main Menu Option 4)
 To exit the programme, select 4 on the main menu.
+
 
 
 
