@@ -129,7 +129,8 @@ else:
 
 # Question 5 - Arithmetic Equations
 print("\nQuestion 5")
-# This will request the result of a simple arithmetic expression in the format: (a x b) + c
+# This will request the result of a simple arithmetic expression in the format: (m x n) + p
+# For simplicity, each number in the question is coded to be less that or equal to 10
 mark5 = 1
 wrong_count5 = 0
 m = random.randint(1,10)
@@ -162,16 +163,18 @@ time_taken = mark_end - mark_start
 score = mark1 + mark2 + mark3 + mark4 + mark5
 
 # A decrative feature before printing the score
+print("Quiz Completed!")
 print(" ")
 print("LOADING... Please wait", end=" ")
 for i in range (3):
     print(".", end= " ", flush= True)  # This prints three dots.The flush parameter ensures python displays one dot after each time interval
     time.sleep(0.75)  # This applies the time package to space the appearance of the dots out by 0.75 seconds
 
-
+# Printing the final score
 print(f"\n\nScore: {score}/5")  # This prints the final score, marked over 5.
 print(f"\nTime Taken:{time_taken:.2f} seconds") # This returns the elapsed time in seconds to 2 decimal places
 
+# Generating a comment based on the score
 if score >= 4:
     comment = "Well Done!"  # "Well Done!" is printed if the score is 4/5 or above
 elif score >= 2:  
@@ -180,5 +183,6 @@ else:
     comment = "Practice some more" # "Practise some more" is printed if the score is 1/5
 
 print(comment) # The final command prints the comment.
-stayopen = input("Press ENTER to exit") 
+stayopen = input("Press ENTER to exit")  # This keeps the window open until the user is ready to exit
+
 
