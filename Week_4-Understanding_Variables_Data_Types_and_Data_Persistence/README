@@ -1,24 +1,26 @@
-**WEEK 4 CONSOLIDATION TASK - README FILE - Instructions on Usage**
+README File 
+Week 4 Consolidation Task: Inventory Management System
 
 **Introduction**
 The Python programme is a simple Command Line Interface (CLI) inventory management system. It can recieve input of product details and write these into a JSON file for long-term storage. The product names cannot be changed, but product quantities and prices can be updated.
 
 **Use Cases**
-The inventory management system will be useful for storing the price and quantity details of small to medium amounts of inventory. While there is no upper limit for the number of inventory items, to retain its speed, the programme can optimally manage a few hundred entries.
-It will be helpful for a small business warehouse or a private household's kitchen pantry.
+The inventory management system will be useful for storing the price and quantity details of small to medium amounts of inventory. While there is no upper limit for the number of inventory items, to retain its speed, the programme can optimally manage a few hundred entries at most.
+The pogramme will be helpful for a small business warehouse or a private household's kitchen pantry.
 
 **Installation**
 The programme contains a python file, and a linked JSON file for data storage, both of which can be downloaded and run directly.
 
 **Usage**
-Run the program with CLI:
-    bash
-python Inventory_Management_System_Consolidation_Task.py
+Run the program with CLI on Windows:
+<file path> python Inventory_Management_System_Consolidation_Task.py
+
+It can also be open directly on a Python runtime software.
 
 **Adding Products** (Main Menu Option 1)
 To add a product, enter the product name as a string. The product name can include numbers, letters and special characters such as spaces,hyphens and exclamation marks.
-(Acceptable product name inputs include: jam, cheese, chocolate, apricot jam, cheddar cheese, dark chocolate, 7UP and ChipsAhoy!).
-If the first character in the name is a letter, Python automatically capitalises it.
+(Acceptable product name inputs include: jam, cheese, chocolate, apricot jam, cheddar cheese, dark chocolate, milk-UHT, ChipsAhoy! and 7UP).
+If the first character in the name inputted is a letter, Python automatically capitalises it before writing it into the JSON file.
 
 Enter the product quantity as an integer (whole number), and the price as a floating number without the currency symbol (e.g. 3.25 instead of £3.25). 
 
@@ -42,12 +44,12 @@ Ensure to enter a whole number for the product quantity, and a number for the pr
 
 As product names cannot be changed through the Python programme, to change a product, you can change the present product quantity (and price) to 0, and  then add the product as a new product with an appropriately modified name, and with the new price and quantity. It is also possible to directly modify the product details in the JSON file.
 
-
 **Viewing Products** (Main Menu Option 3)
 To view the inventory, enter option 3 on the main menu. The programme will then print the inventory list.
 The programme then prints the main menu, from which you can perform another action.
 
 **Exiting the Programme** (Main Menu Option 4)
 To exit the programme, select 4 on the main menu.
+
 
 
