@@ -13,7 +13,7 @@ The programme contains a python file, and a linked JSON file for data storage, b
 **Usage**
 Run the program:
     bash
-python Week4-Consolidation-InventoryManagementSystem.py
+python Inventory_Management_System_Consolidation_Task.py
 
 **Adding Products** (Main Menu Option 1)
 To add a product, enter the product name as a string. The product name can include numbers, letters and special characters such as spaces,hyphens and exclamation marks.
@@ -49,3 +49,4 @@ The programme then prints the main menu, from which you can perform another acti
 
 **Exiting the Programme** (Main Menu Option 4)
 To exit the programme, select 4 on the main menu.
+
