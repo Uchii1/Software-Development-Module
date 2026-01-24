@@ -1,4 +1,5 @@
-**README FILE- week 9 consolidation **
+README File
+Week 9 Consolidation Task : Calculator Webpage with Python Backend
 
 ** INTRODUCTION**
 The project is a calculator webpage with a Python backend. It applies HTML, CSS, JavaScript and PyScript.
@@ -26,4 +27,5 @@ The inputs accept only digits. If the input is invalid (for example, if your val
 There is no long-term storage file, but the PyScript function will store the single last calculation you solve with the arithmetic calculator, and displays this on your next visit, after you click into the textbox.
 
 During each use, the webpage stores and displays all the calculations done with the arithmetic calculator on that visit. However, this is lost when the page is closed or refreshed, except for the last calculation.
+
 
