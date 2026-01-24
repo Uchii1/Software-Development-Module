@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEADING -->
+<head>
+    <!-- Site title and icon -->
+    <title>  Calculator </title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔢</text></svg>">
+
+    <!-- Recommended meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <!-- Link to CSS file-->
+    <link rel="stylesheet" href="backendcalculator.css">
+
+    <!-- This script tag bootstraps PyScript -->
+    <script type="module" src="https://pyscript.net/releases/2025.11.2/core.js"> </script> 
+</head>
+
+
+<!-- MAIN WEBSITE CONTENT -->
+<body>
+
+    <!-- Python Eval Calculator -->
+    <h1> 🔢 Calculator  </h1>
+
+    <!-- CALCULATOR TIPS SECTION-->
+    <!-- div id for 2 columns of calculator tips -->
+    <div id ="tips"> <h3> Arithmetic Calculator</h3>
+        <div class = "calculator-tips" >
+            <div>
+            <p>  
+                <ul> 
+                <li> Asterisk (*) for multiplicaton - e.g 2 x 2 = 2*2 </li> 
+                <li> Double asterisks (**) for exponents - e.g. 2² = 2**2 </li> 
+                </ul> 
+            </p>  
+            </div>
+        
+            <div> 
+            <p> 
+                <ul> 
+                <li> Type in pi for π (this is taken as 3.142) </li> 
+                <li> Type in g for acceleration due to gravity (this is taken as 9.81) </li> 
+                </ul>
+            </p> 
+            </div>
+        </div>
+    </div>
+
+    <!-- CALCULATOR TEXT BOX -->
+    <!-- The below formats the input box to be the width of 10 character spaces-->
+    <div class="calculator-section">
+
+        <div id ="calculator-input">
+            <input type="text" id="a" placeholder="Type Here" size = "10">
+        </div>
+
+        <div id = "button">
+            <button id="calculate-button">Calculate</button>
+        </div>
+
+    </div>
+
+    <!-- Below, the result is printed -->
+    <div id="result">
+
+    </div>
+
+    <!-- QUADRATIC CALCULATOR -->
+    <div class="quadratic" >
+        <h3> Quadratic Equation Calculator </h3>
+        
+        <!-- Formatting a text area to display tips for using the quadratic calculator -->
+        <div id = "quadratic-tips"> 
+            <p> A quadratic equation is one that can be written in the form: ax² + bx + c = 0, where a ≠ 0. <br>        
+                Enter a, b, and c from your quadratic equation below to find the values of x. 
+            </p>
+        </div>
+
+        <div id="quadratic-input"> 
+        <!-- Here, 3 inputs are collected from the quadratic equation-->
+            <p>   
+                <input id="num1" type="number" placeholder="a"> x² +
+                <input id="num2" type="number" placeholder="b"> x +
+                <input id="num3" type="number" placeholder="c"> = 0
+            </p>
+        </div>
+
+        <!-- This calls the python quadratic equation function defined in the pythn script below-->
+        <div id = "solve">
+            <button id = "Solve" py-click="quadratic"> Solve </button>
+        </div>
+
+    <!-- div id section to print the answer-->
+        <div id = "answer">  </div>
+
+    </div>
+
+    
+    <!-- The Python script will be run from within HTML, as this is simpler for testing-->
+    <script type="py">
+    from js import document
+    from js import localStorage
+    from pyscript import when
+
+
+    def calculation(event):
+        expression=document.getElementById("a").value
+
+        if expression.strip() == "":
+            document.getElementById("result").innerText += "Error: Textbox is empty. Please enter an expression\n"
+            return
+        
+        try:
+            pi = 3.142
+            g = 9.81
+            answer= eval(expression)
+            document.getElementById("result").innerText +=f" {expression} = {answer}\n"
+            document.getElementById("a").value = ""  # Clear input on sucessfully running the Calculator
+
+            #Saving the result as variable savedAnswer, and expression as varibale savedExpression
+            localStorage.setItem("savedAnswer", answer)
+            localStorage.setItem("savedExpression", expression)
+
+        except:
+            document.getElementById("result").innerText += "Error: Invalid expression\n"
+            return
+
+    document.getElementById("calculate-button").onclick = calculation
+    
+    # DATA PERSISTENCE - The below loads the most recent output calculation() when the user reloads the page and clicks the textbox.
+    # Between reloads of the page, the outputs are also stored.
+    @when("DOMContentLoaded", document)
+
+
+    # Python function to support quadratic equation solving
+    def quadratic(event):
+        # Accepting inputs and removing trailing spaces
+        input_a = document.getElementById('num1').value.strip()
+        input_b = document.getElementById('num2').value.strip()
+        input_c = document.getElementById('num3').value.strip()
+
+        # checking if the input box for a is empty
+        if input_a == "":
+            document.getElementById("answer").innerHTML = "Error: You must enter a value for a <br>"
+            return
+
+        # checking if the input for a is 0
+        else:
+            try:
+                a = float(input_a)
+                b = float(input_b)
+                c = float(input_c)
+
+                if a == 0:
+                    document.getElementById("answer").innerHTML = "Error: 'a' cannot be 0.  x² needs a coefficient.  <br>"
+                    return
+
+            except ValueError:
+                document.getElementById("answer").innerHTML = "Error: Please enter valid inputs. <br>"
+                return
+
+
+            # Calculating the roots and rounding to 2 decimal places (:.2f) or 1 decimal place (:.1f) as appropriate
+            try:
+                disc = (b**2) - (4*a*c)
+
+                if disc > 0:
+                    root1 = (-b + (disc**0.5)) / (2*a)
+                    root2 = (-b - (disc**0.5)) / (2*a)
+                    answer = f"There are two roots: {root1:.1f} and {root2:.1f}"
+
+                elif disc == 0:
+                    root = -b / (2*a)
+                    answer = f"There is one root: {root}"
+                    
+                else:
+                    realRoot = -b /(2*a)
+                    imaginaryRoot = abs((disc)**0.5) / (2*a)
+                    answer = f"There are complex roots:{realRoot:.2f} + {imaginaryRoot:.2f}i, and {realRoot:.2f} - {imaginaryRoot:.2f}i"
+                document.getElementById("answer").innerHTML = answer
+            
+            except:
+                document.getElementById("answer").innerHTML = "<br> Error: Invalid expression"
+                return
+
+
+    #The below helps to ensure data persistence for the calculation() function
+    def load_saved():
+        retained_answer = localStorage.getItem("savedAnswer")
+        retained_expression = localStorage.getItem("savedExpression")
+
+        if retained_answer and retained_expression:
+            document.getElementById("result").innerText += f"Last calculation: {retained_expression} = {retained_answer} \n"
+
+    load_saved()
+    </script>  
+
+</body>
+
+<footer>
+
+ <hr style= "border: 2px solid black">
+ <p> Webpage Design by U.C. Obiagwu <br>
+     For questions, comments and suggestions, reach out at:<i> <span class="no-wrap"> utlity-webpages@gmail.com</span> </i> 
+</p>
+ 
+</footer>
+</html>
