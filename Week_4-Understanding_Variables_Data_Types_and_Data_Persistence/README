@@ -2,7 +2,9 @@ README File
 Week 4 Consolidation Task: Inventory Management System
 
 **Introduction**
-The Python programme is a simple Command Line Interface (CLI) inventory management system. It can recieve input of product details and write these into a JSON file for long-term storage. The product names cannot be changed, but product quantities and prices can be updated.
+The Python programme is a simple Command Line Interface (CLI) inventory management system. It can recieve input of product details and write these into a JSON file for long-term storage. Within the JSON file, each product is stored as a dictionary. The keys are the data types (i.e. Product ID, Product Name, Product Quantity, and Price). The values are the entries inputted by the user, along with the automatically generated product ID. The different dictionaries are stored as a list in the JSON file.
+
+The product names cannot be changed, but product quantities and prices can be updated.
 
 **Use Cases**
 The inventory management system will be useful for storing the price and quantity details of small to medium amounts of inventory. While there is no upper limit for the number of inventory items, to retain its speed, the programme can optimally manage a few hundred entries at most.
@@ -50,6 +52,7 @@ The programme then prints the main menu, from which you can perform another acti
 
 **Exiting the Programme** (Main Menu Option 4)
 To exit the programme, select 4 on the main menu.
+
 
 
 
