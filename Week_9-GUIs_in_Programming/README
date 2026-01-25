@@ -6,7 +6,9 @@ The project is a calculator webpage with a Python backend. It applies HTML, CSS,
 
 
 ** INSTALLATION**
-Install the programme by downloading the HTML and CSS files. The Python backend is written directly into the html file, with Pyscript. This helps to keep installation simple. 
+Install the programme by downloading the HTML and CSS files. 
+The Python backend is written directly into the html file, with Pyscript. 
+This helps to keep installation simple. 
 
 
 ** INSTRUCTIONS**
@@ -27,5 +29,6 @@ The inputs accept only digits. If the input is invalid (for example, if your val
 There is no long-term storage file, but the PyScript function will store the single last calculation you solve with the arithmetic calculator, and displays this on your next visit, after you click into the textbox.
 
 During each use, the webpage stores and displays all the calculations done with the arithmetic calculator on that visit. However, this is lost when the page is closed or refreshed, except for the last calculation.
+
 
 
