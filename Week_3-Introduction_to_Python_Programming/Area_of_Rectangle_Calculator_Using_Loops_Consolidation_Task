@@ -13,19 +13,19 @@ def calculate_area():
         print("Error: Please enter a valid number")
         length = input('Please enter the length of the rectangle:')
     
-    # This converts the length to an integer to check it is positive
-    length = int(length) 
+    # This converts the length to a float to check it is positive
+    length = float(length) 
 
     while length <= 0 :
         print ("Length must be positive. Try again")
-        length = int(input('Please enter the length of the rectangle:'))
+        length = float(input('Please enter the length of the rectangle:'))
        
         while not length.isdigit():
             print("Error: Please enter a valid number")
             length = input('Please enter the length of the rectangle:') #checks again that length is a number
     
-    #This converts the length to an integer after validation
-    length = int(length) 
+    #This converts the length to a number after validation
+    length = float(length) 
 
     # The IF statement below is a CONDITIONAL statement. It only executes once the length inputted by the user is positive. 
     if length > 0:
@@ -36,9 +36,9 @@ def calculate_area():
             print("Error: Please enter a valid number")
             width = input('Please enter the width of the rectangle:')
 
-        width = int(width) #This converts the width to integer to check it is positive
+        width = float(width) #This converts the width to float to check it is positive
     
-       # Now the width is an integer, so Python checks if it is positive
+       # Now the width is a number, so Python checks if it is positive
         while width <= 0 :  
             print ("\nThe width must be positive.Try again")
             width = input('Please enter the width of the rectangle:')
@@ -48,7 +48,7 @@ def calculate_area():
                 print("Error: Please enter a valid number")
                 width = input("Please enter the width of the rectangle:")
 
-                width = int(width) # This converts the width to integer after validation
+                width = float(width) # This converts the width to a float after validation
 
         if width > 0:
 
