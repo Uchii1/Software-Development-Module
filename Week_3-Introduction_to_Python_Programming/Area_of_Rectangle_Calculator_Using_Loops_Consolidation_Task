@@ -11,14 +11,14 @@ def calculate_area():
     # The WHILE statement is a LOOPING statement. It executes as long as the length inputed by the user is not a valid number
     while not length.isdigit():
         print("Error: Please enter a valid number")
-        length = input('Please enter the length of the rectangle:')
+        length = input("Please enter the length of the rectangle:")
     
     # This converts the length to an integer to check it is positive
     length = int(length) 
 
     while length <= 0 :
         print ("Length must be positive. Try again")
-        length = int(input('Please enter the length of the rectangle:'))
+        length = input("Please enter the length of the rectangle:")
        
         while not length.isdigit():
             print("Error: Please enter a valid number")
