@@ -13,6 +13,6 @@ It can also be open directly on a Python runtime software.
 
 ** INSTRUCTIONS **
 When prompted, type in the number of Fibonacci terms you wish to print, and press enter. This input must be a positive integer, otherwise, you will be requested to re-enter it.
-Depending on the software used to run it, the programme can very quickly print Fibonacci numbers up to around n = 40. It slowly down slightly after this.
+Depending on the software used to run it, the programme can very quickly print Fibonacci numbers up to around n = 40. It slows down slightly after this.
 When the terms are printed, you can either repeat the operation, or close the programme.
 
