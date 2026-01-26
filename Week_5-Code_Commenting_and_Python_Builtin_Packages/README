@@ -23,5 +23,6 @@ python C:\path\to\Arithmetic_Quiz_Including_Comments.py
 It can also be open directly on a Python runtime software.
 
 ** INSTRUCTIONS **
-Answer each question by typing in the digits, and press enter. 
+Answer each question by typing in the digits, and press enter. You have three attempts before the programme automatically moves on to the next question.
 The quiz measures the time taken to answer the questions from the time the first question is displayed to the time you press enter for the final question. This time is displayed at the end of the programme's running. There is no time limit to answer the questions, however.
+
