@@ -9,8 +9,9 @@ import time  # The time module helps to record the time taken by the user to com
 # Including a suitable heading
 print(" *** ARITHMETIC QUIZ *** ")
 
-#  Input is requested here so that the programme does not proceed until the user presses the ENTER key
-display_instructions = input("There are 5 questions in total. You have three attempts at each. Any valid number inputted counts as an attempt.\nHit ENTER now to start the quiz")
+#  Input is requested here so that the programme and timer do not proceed until the user presses the ENTER key
+print("There are 5 questions in total. You have three attempts at each")
+display_instructions = input("Any valid number inputted counts as an attempt.\nHit ENTER now to start the quiz")
 
 ### TIMER BEGINS ###
 mark_start = time.time()  # This marks the time the user starts the first question
@@ -176,13 +177,14 @@ print(f"\nTime Taken:{time_taken:.2f} seconds") # This returns the elapsed time 
 
 # Generating a comment based on the score
 if score >= 4:
-    comment = "Well Done!"  # "Well Done!" is printed if the score is 4/5 or above
+    comment = "Well Done!"  # "Well Done!" is printed if the score is 4/5 or 5/5
 elif score >= 2:  
     comment = "Good Attempt!"  # "Good Attempt!" is printed if the score is 2/5 or 3/5
 else:
-    comment = "Practice some more" # "Practise some more" is printed if the score is 1/5
+    comment = "Practice some more" # "Practise some more" is printed if the score is 1/5 or 0/5
 
 print(comment) # The final command prints the comment.
 stayopen = input("Press ENTER to exit")  # This keeps the window open until the user is ready to exit
+
 
 
