@@ -25,13 +25,13 @@
   },
   {
     "id": 5,
-    "name": "Carrots",
+    "name": "Rice-500g",
     "quantity": 2,
     "price": 8.0
   },
   {
     "id": 6,
-    "name": "Dark-chocolate",
+    "name": "Dark chocolate",
     "quantity": 15,
     "price": 1.5
   },
@@ -55,14 +55,20 @@
   },
   {
     "id": 10,
-    "name": "Cheddar-cheese",
+    "name": "Cheddar cheese",
     "quantity": 23,
     "price": 2.345
   },
   {
     "id": 11,
-    "name": "Peanut-butter",
+    "name": "Peanut butter",
     "quantity": 5,
     "price": 0.89
+  },
+  {
+    "id": 12,
+    "name": "Milk-UHT",
+    "quantity": 5,
+    "price": 0.69
   }
 ]
