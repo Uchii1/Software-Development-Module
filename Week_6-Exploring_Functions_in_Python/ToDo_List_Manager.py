@@ -88,7 +88,7 @@ def menu():
         print("2. List all Tasks ")
         print("3. Mark a Task as Complete ")
         print("4. Exit the Task Manager ")
-        print("======================")  # CAN REMOVE if it looks untidy
+        print("======================") 
         menu_input = input("\n Enter a choice from above (1-4): ").strip()  # Strip removes hanging spaces from the input
 
         # The user's main menu choice is accepted as a string.
@@ -104,7 +104,7 @@ def menu():
                 print("You must enter something in the task description field to proceed. \nPlease return to main menu and try again") 
 
         elif menu_input == "2":  # Lists all tasks
-            print("\n ===== CURRENT TASKS ======")
+            print("\n ===== CURRENT TASKS ======")  # This is a heading to print over the tasks
             showAll()
 
         elif menu_input == "3":  # Marks task as Complete
@@ -130,3 +130,4 @@ def menu():
 if __name__ == "__main__":
 
     menu()  # This runs the mainmenu function when the script is executed directly.
+
