@@ -45,6 +45,7 @@ To update a product, select the product from the list displayed, by inputing the
 Ensure to enter a whole number for the product quantity, and a number for the price. If a long float is entered for the price, the price will be stored and displayed to the nearest 2 decimal places, as it is a monetary quantity.
 
 As product names cannot be changed through the Python programme, to change a product, you can change the present product quantity (and price) to 0, and  then add the product as a new product with an appropriately modified name, and with the new price and quantity. It is also possible to directly modify the product details in the JSON file.
+In the present version, products cannot be deleted from the list through the programme. 
 
 **Viewing Products** (Main Menu Option 3)
 To view the inventory, enter option 3 on the main menu. The programme will then print the inventory list.
@@ -52,6 +53,7 @@ The programme then prints the main menu, from which you can perform another acti
 
 **Exiting the Programme** (Main Menu Option 4)
 To exit the programme, select 4 on the main menu.
+
 
 
 
