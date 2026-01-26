@@ -16,6 +16,7 @@ import random
 
 # The answer, stored as y, is a random integer between 1 and 10 inclusive.
 y = random.randint(1, 10)
+print("  ")
 
 # This prompts the user for their guess, which is stored as an integer, x later in the script
 print("Please guess a Number between 1 and 10 inclusive. You have EIGHT attempts\n")
