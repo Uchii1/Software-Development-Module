@@ -13,16 +13,17 @@ def calculate_area():
         print("Error: Please enter a valid number")
         length = input("Please enter the length of the rectangle:")
     
-    # This converts the length to an integer to check it is positive
+    # Once the length is confirmed as a digit, this converts it to an integer to check it is positive
     length = int(length) 
 
     while length <= 0 :
         print ("Length must be positive. Try again")
         length = input("Please enter the length of the rectangle:")
-       
+
+        #This nested loop checks that the newly-entered length is a number before returning to the nesting loop above to check it is a digit
         while not length.isdigit():
             print("Error: Please enter a valid number")
-            length = input('Please enter the length of the rectangle:') #checks again that length is a number
+            length = input('Please enter the length of the rectangle:')
     
     #This converts the length to a number after validation
     length = int(length) 
