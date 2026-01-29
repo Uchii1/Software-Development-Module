@@ -139,7 +139,7 @@ def main():
 
         # If the user enters 1, this requests the product name and implements the add_product function or prints an error message as appropriate
         if choice == "1":
-            print("\nPlease provide a Product Name. This must be entered as one string with no spaces.")
+            print("\nPlease provide a Product Name. This must be entered as one string.")
             name = input("Enter the Product Name: ")
             if name.strip().capitalize(): 
                 try:
@@ -165,3 +165,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
