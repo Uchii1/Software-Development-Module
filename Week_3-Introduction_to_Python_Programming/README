@@ -1,20 +1,21 @@
-README File 
+# README File 
 Week 3 Consolidation Task: Programme to Calculate Area of a Rectangle
 
-**INTRODUCTION**
+## INTRODUCTION
 The programme is a CLI programme written in Python, which calculates the area of a rectangle (including squares).
 
-**INSTALLATION**
+## INSTALLATION
 The Python file can be downloaded and run directly.
 
 Run the program with CLI on Windows:
 python C:\path\to\Area_of_Rectangle_Calculator_Using_Loops_Consolidation_Task.py
 The programme can also be run on a Python runtime software.
 
-** INSTRUCTIONS **
+## INSTRUCTIONS 
 Enter the values of the length and breath of the rectangle. The programme will request re-entry of these details if either is not a positive number. You can then re-enter the requested value.
 
-The programme calculates the area of the rectangle (length times breadth)
+The programme calculates and prints the area of the rectangle (length times breadth)
+
 
 
 
