@@ -32,7 +32,7 @@ If the wrong value types are entered, the programme will return to the main menu
 Making an Entry: 
 
 Main Menu (1-4): 1
-Product Name: Cheddar-cheese
+Product Name: Peanut-butter
 Enter quantity: 5
 Enter price per unit: 0.89
 Output: {'id': 11, 'name': 'Peanut-butter', 'quantity': 5, 'price': 0.89} added successfully!
@@ -53,6 +53,7 @@ The programme then prints the main menu, from which you can perform another acti
 
 **Exiting the Programme** (Main Menu Option 4)
 To exit the programme, select 4 on the main menu.
+
 
 
 
