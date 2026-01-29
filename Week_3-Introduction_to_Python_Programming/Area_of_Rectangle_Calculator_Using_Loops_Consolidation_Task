@@ -1,7 +1,7 @@
 # Python Program to Calculate the Area of a Rectangle (Using loops to ensure input is positive)
 # The program also uses if and while loops to allow the user to repeat the operation
 
-print ("Programme to Calculate the area of a rectangle (or square)") 
+print ("Programme to Calculate the area of a rectangle (including squares)") 
 
 def calculate_area():
     print(" ") # Prints a blank line for readability and neatness
