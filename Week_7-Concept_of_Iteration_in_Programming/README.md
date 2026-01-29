@@ -1,7 +1,7 @@
 README File
 Week 7 Consolidation Task : Number Guessing Game
 
-** INTRODUCTION **
+**INTRODUCTION
 The programme is a simple Command Line Interface (CLI) number game. 
 The user is prompted to guess a fixed number, which is between 1 and 10. 
 The number is randomly generated using Python's random module, and so changes everytime the programme is run.
