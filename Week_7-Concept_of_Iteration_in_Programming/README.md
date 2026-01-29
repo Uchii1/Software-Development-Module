@@ -6,7 +6,7 @@ The programme is a simple Command Line Interface (CLI) number game.
 The user is prompted to guess a fixed number, which is between 1 and 10. 
 The number is randomly generated using Python's random module, and so changes everytime the programme is run.
 
-*INSTALLATION
+**INSTALLATION**
 The programme contains a python file, which can be downloaded and run directly. No attachments are neeeded.
 
 Run the program with CLI on Windows
