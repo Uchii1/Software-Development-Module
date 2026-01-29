@@ -1,5 +1,5 @@
 # README File
-# Week 8 Consolidation Task : Fibonacci Sequence Programme
+# Week 8 Consolidation Task: Fibonacci Sequence Programme
 
 ## INTRODUCTION
 This is a Command Line Interface programme to print the Fibonacci sequence to a requested number of terms. The programme uses two recursive functions. One function ensures the requested number of terms is a positive integer, and the other, which is the main function, calculates the Fibonacci number.
