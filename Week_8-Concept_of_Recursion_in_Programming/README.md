@@ -1,17 +1,17 @@
-README File
-Week 8 Consolidation Task : Fibonacci Sequence Programme
+# README File
+# Week 8 Consolidation Task : Fibonacci Sequence Programme
 
-**INTRODUCTION**
+## INTRODUCTION
 This is a Command Line Interface programme to print the Fibonacci sequence to a requested number of terms. The programme uses two recursive functions. One function ensures the requested number of terms is a positive integer, and the other, which is the main function, calculates the Fibonacci number.
 
-**INSTALLATION**
+## INSTALLATION
 The programme is a Python file, which can be downloaded and run directly. No attachments are neeeded.
 
 Run the program with CLI on Windows
 <file path> python Fibonacci_Sequence_Programme-Using_Recursion.py
 It can also be open directly on a Python runtime software.
 
-** INSTRUCTIONS **
+## INSTRUCTIONS
 When prompted, type in the number of Fibonacci terms you wish to print, and press enter. This input must be a positive integer, otherwise, you will be requested to re-enter it.
 Depending on the software used to run it, the programme can very quickly print Fibonacci numbers up to around n = 40. It slows down slightly after this.
 When the terms are printed, you can either repeat the operation, or close the programme.
