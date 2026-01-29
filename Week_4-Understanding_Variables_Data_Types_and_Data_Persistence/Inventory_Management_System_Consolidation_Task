@@ -68,13 +68,16 @@ def view_inventory():
             inventory = json.load(f)
     
     # The below lines formats the printing of the inventory data
+
+    # This prints the heading line for the inventory list
     print("\nCurrent Inventory:")
     print("-" * 40)
     print(f"{'id':<5} {'Product':<15}{'Quantity':<10}{'Price':<15}") 
     print("-" * 40)
-    # Below, each inventory item's details is printed. The price is printed to 2 decimal places.
+
+    # Below, each inventory item's details are printed. The price is printed to 2 decimal places.
     for name in inventory:
-        print(f"{name['id']:<5} {name['name']:<15} [{name['quantity']:<5}] {name['price']:<15.2f}")
+        print(f"{name['id']:<5} {name['name']:<15} {name['quantity']:<5} {name['price']:<15.2f}")
     print("-" * 40)
     
     # The below handles an exception where the inventory is empty
@@ -165,4 +168,5 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
